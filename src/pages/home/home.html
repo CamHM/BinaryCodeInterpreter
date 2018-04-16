@@ -1,14 +1,33 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="dark">
+    <ion-title>Binary Code Interpreter</ion-title>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="card-background-page">
+  <ion-card>
+    <img src="../assets/imgs/bcd-background.jpg">
+    <ion-row>
+      <ion-col>
+        <button ion-button color="dark" (click)="goToBCD()">Ir a BCD</button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card>
+    <img src="../assets/imgs/bcd-ex3-background.jpg">
+    <ion-row>
+      <ion-col>
+        <button ion-button color="dark" (click)="goToBCDex3()">Ir a BCDex3</button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <ion-card>
+    <img src="../assets/imgs/gray-background.jpg">
+    <ion-row>
+      <ion-col>
+        <button ion-button color="dark" (click)="goToGray()">Ir a BCDex3</button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 </ion-content>
