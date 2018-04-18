@@ -10,8 +10,8 @@ import { ActionSheetController } from 'ionic-angular';
 })
 export class BcdPage {
 
-  isToDecimal: boolean;
-  isToBCD: boolean;
+  isBCDex3: boolean;
+  isGray: boolean;
   actualInput: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public events: Events, public actionSheetCtrl: ActionSheetController) {
@@ -21,23 +21,34 @@ export class BcdPage {
     console.log('ionViewDidLoad BcdPage');
   }
 
-  enableToDecimal(){
-    this.isToBCD = false;
-    this.isToDecimal = true;
+  setOnBCDex3():void{
+    this.isBCDex3 = true;
+    this.isGray = false;
   }
 
-  enableToBCD(){
-    this.isToBCD = true;
-    this.isToDecimal = false;
+  setOnGray():void{
+    this.isBCDex3 = false;
+    this.isGray = true;
   }
 
-  calculate(inputValue:number):number{
-    if(this.isToBCD == true){
-      return 1;
-    }else if(this.isToDecimal == true){
+  isValidate(input:number):boolean{
+    var inputString = String(input);
+    let pattern = /[0-1]/;
+    prompt("Valido: " + inputString+ " " + pattern.test(inputString));
+    return pattern.test(inputString);  
+  }
+
+  calculate():void{
+    this.isValidate(this.actualInput);
+    if(this.isBCDex3 == true){
+      this.showActionSheet(this.toBCDex3(this.actualInput));
+    }else if(this.isGray == true){
       this.showActionSheet(this.actualInput);
-      return this.actualInput;
     }
+  }
+
+  toBCDex3(bcd:number):number{
+    return 0;
   }
 
   showActionSheet(result:number):void{

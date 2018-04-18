@@ -10,15 +10,15 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Number</ion-label>
-      <ion-input [(ngModel)]="actualInput" type="number"></ion-input>
+      <ion-input [(ngModel)]="actualInput" type="number" clearInput="true"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>BCD a Decimal</ion-label>
-      <ion-checkbox color="default" [(ngModel)]="isToDecimal" (click)="enableToDecimal()"></ion-checkbox>
+      <ion-label>Interpretación BCDex3</ion-label>
+      <ion-checkbox color="default" [(ngModel)]="isBCDex3" (click)="setOnBCDex3()"></ion-checkbox>
     </ion-item>
     <ion-item>
-      <ion-label>Decimal a BCD</ion-label>
-      <ion-checkbox color="default" [(ngModel)]="isToBCD" (click)="enableToBCD()"></ion-checkbox>
+      <ion-label>Interpretación Gray</ion-label>
+      <ion-checkbox color="default" [(ngModel)]="isGray" (click)="setOnGray()"></ion-checkbox>
     </ion-item>
   </ion-list>
   <button ion-button block icon-right (click)="calculate()">Calcular
