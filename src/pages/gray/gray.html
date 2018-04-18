@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="secondary">
     <ion-title>Gray</ion-title>
   </ion-navbar>
 
@@ -8,5 +8,25 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Number</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Gray a Decimal</ion-label>
+      <ion-checkbox color="secondary" [(ngModel)]="toDecimal"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Decimal a Gray</ion-label>
+      <ion-checkbox color="secondary" [(ngModel)]="toGray"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Generar codigo Gray</ion-label>
+      <ion-checkbox color="secondary" [(ngModel)]="grayCode"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <button ion-button color="secondary" block icon-right>Calcular
+    <ion-icon name="calculator"></ion-icon>
+  </button>
 </ion-content>

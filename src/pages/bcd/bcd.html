@@ -1,12 +1,27 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Bcd</ion-title>
+  <ion-navbar color="calm">
+    <ion-title>BCD</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Number</ion-label>
+      <ion-input [(ngModel)]="actualInput" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>BCD a Decimal</ion-label>
+      <ion-checkbox color="default" [(ngModel)]="isToDecimal" (click)="enableToDecimal()"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Decimal a BCD</ion-label>
+      <ion-checkbox color="default" [(ngModel)]="isToBCD" (click)="enableToBCD()"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <button ion-button block icon-right (click)="calculate()">Calcular
+    <ion-icon name="calculator"></ion-icon>
+  </button>
 </ion-content>

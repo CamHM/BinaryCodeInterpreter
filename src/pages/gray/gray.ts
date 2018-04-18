@@ -8,6 +8,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GrayPage {
 
+  toDecimal: boolean;
+  toGray: boolean;
+  grayCode: boolean;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -15,4 +19,15 @@ export class GrayPage {
     console.log('ionViewDidLoad GrayPage');
   }
 
+  generateGray():void{
+
+  }
+
+  calculateGray():void{
+
+  }
+
+  calculateDByGray():void{
+    
+  }
 }

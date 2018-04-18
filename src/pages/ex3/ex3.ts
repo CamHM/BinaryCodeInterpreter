@@ -8,6 +8,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class Ex3Page {
 
+  toDecimal: boolean;
+  toBCDex3: boolean;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -15,4 +18,15 @@ export class Ex3Page {
     console.log('ionViewDidLoad Ex3Page');
   }
 
+  calculateDecimal(){
+    console.log('Decimal');
+  }
+
+  calculateBCDex3(){
+    console.log('Ex3');
+  }
+
+  calculate(){
+    
+  }
 }
