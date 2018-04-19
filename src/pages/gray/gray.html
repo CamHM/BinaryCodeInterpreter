@@ -11,22 +11,22 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Number</ion-label>
-      <ion-input type="number"></ion-input>
+      <ion-input type="number" [(ngModel)]="actualInput" clearInput="true"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Intrepretación BCD</ion-label>
-      <ion-checkbox color="secondary" [(ngModel)]="toDecimal"></ion-checkbox>
+      <ion-checkbox color="secondary" [(ngModel)]="isBCD" (click)="setOnBCD()"></ion-checkbox>
     </ion-item>
     <ion-item>
       <ion-label>Intrepretación BCDex3</ion-label>
-      <ion-checkbox color="secondary" [(ngModel)]="toGray"></ion-checkbox>
+      <ion-checkbox color="secondary" [(ngModel)]="isBCDex3" (click)="setOnBCDex3()"></ion-checkbox>
     </ion-item>
     <ion-item>
       <ion-label>Generar codigo Gray</ion-label>
-      <ion-checkbox color="secondary" [(ngModel)]="grayCode"></ion-checkbox>
+      <ion-checkbox color="secondary" [(ngModel)]="isGrayCode" (click)="setOnGrayCode()"></ion-checkbox>
     </ion-item>
   </ion-list>
-  <button ion-button color="secondary" block icon-right>Calcular
+  <button ion-button color="secondary" block icon-right (click)="calculateGray()">Calcular
     <ion-icon name="calculator"></ion-icon>
   </button>
 </ion-content>
